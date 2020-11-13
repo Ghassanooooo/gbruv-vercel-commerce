@@ -2,6 +2,7 @@
   "name": "nextjs-commerce",
   "version": "1.0.0",
   "scripts": {
+    "start:pm2": "pm2 start --name=gbruv npm -- start",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
