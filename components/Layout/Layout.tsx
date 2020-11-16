@@ -3,8 +3,11 @@ import dynamic from 'next/dynamic'
 import useSWR from 'swr'
 import { getNavbarConfig, slug } from '../fetchers'
 const ErrorBound = dynamic(() => import('./ErrorBound'))
-const Navbar = dynamic(() => import('./Navbar/NewNavbar'))
-const Footer = dynamic(() => import('./Footer'))
+//const Navbar = dynamic(() => import('./Navbar/NewNavbar'))
+//const Footer = dynamic(() => import('./Footer'))
+const Footer = dynamic(() => import('./Footer/footerNew'))
+const Navbar = dynamic(() => import('./Navbar/Navbar'))
+
 const Subscribe = dynamic(() => import('./Subscribe'))
 
 export default function Layout(props: any) {
@@ -37,12 +40,18 @@ export default function Layout(props: any) {
     <>
       {navbar && (
         <ErrorBound>
-          <Navbar backendApiURL={backendApiURL} navbar={navbar} />
+          <Navbar />
           {children}
           <Subscribe />
-          <Footer footerData={footerData} />
+          <Footer />
         </ErrorBound>
       )}
     </>
   )
 }
+
+/**
+       <Footer footerData={footerData} />
+          <Navbar backendApiURL={backendApiURL} navbar={navbar} />
+
+ */
