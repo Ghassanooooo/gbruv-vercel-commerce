@@ -7,26 +7,6 @@ export default function Footer() {
         <div className="footer-custom">
           <div className="footer-lists">
             <div className="footer-list-wrap">
-              <h6 className="ftr-hdr">Order Toll Free</h6>
-              <ul className="ftr-links-sub">
-                <li>800-952-5592</li>
-              </ul>
-              <h6 className="ftr-hdr">International</h6>
-              <ul className="ftr-links-sub">
-                <li>
-                  <a href="http://www.art.fr" rel="nofollow">
-                    France
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.art.co.uk" rel="nofollow">
-                    United Kingdom
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="footer-list-wrap">
               <h6 className="ftr-hdr">Customer Service</h6>
               <ul className="ftr-links-sub">
                 <li>
@@ -37,31 +17,6 @@ export default function Footer() {
                 <li>
                   <a href="/help/placingorders.html" rel="nofollow">
                     Ordering
-                  </a>
-                </li>
-                <li>
-                  <a href="/help/shipping.html" rel="nofollow">
-                    Shipping &amp; Delivery
-                  </a>
-                </li>
-                <li>
-                  <a href="/help/shippingreturns.html" rel="nofollow">
-                    Returns
-                  </a>
-                </li>
-                <li>
-                  <a href="/help/international-shipping.html" rel="nofollow">
-                    International Orders
-                  </a>
-                </li>
-                <li>
-                  <a href="/~/egift-cards/" rel="nofollow">
-                    Gift Cards
-                  </a>
-                </li>
-                <li>
-                  <a href="/help/faq.html" rel="nofollow">
-                    FAQs
                   </a>
                 </li>
               </ul>
@@ -75,36 +30,6 @@ export default function Footer() {
                     rel="nofollow"
                   >
                     Our Company
-                  </a>
-                </li>
-                <li>
-                  <a href="http://corporate.art.com/careers" rel="nofollow">
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href="/asp/landing/artistrising" rel="nofollow">
-                    Artist Rising
-                  </a>
-                </li>
-                <li>
-                  <a href="/~/art-for-business" rel="nofollow">
-                    Business &amp; Trade Sales
-                  </a>
-                </li>
-                <li>
-                  <a href="http://affiliates.art.com/index.aspx" rel="nofollow">
-                    Affiliate Program
-                  </a>
-                </li>
-                <li>
-                  <a href="/catalog" rel="nofollow">
-                    <strong>Shop Our Catalog</strong>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://blog.art.com" rel="nofollow">
-                    ART.COM BLOG
                   </a>
                 </li>
               </ul>
@@ -128,28 +53,6 @@ export default function Footer() {
                   id="ftrEmailInput"
                   className="input"
                   placeholder="Enter email address"
-                />
-
-                <input type="submit" className="button" value="SUBMIT" />
-                <input type="hidden" name="country_iso2" value="" />
-                <input type="hidden" name="language_iso2" value="en" />
-                <input type="hidden" name="site_domain" value="art.com" />
-                <input
-                  type="hidden"
-                  name="email_acq_source"
-                  value="01-000001"
-                />
-                <input
-                  type="hidden"
-                  name="email_acq_date"
-                  value=""
-                  id="ftr-email-date"
-                />
-                <input type="hidden" name="brand_id" value="ART" />
-                <input
-                  type="hidden"
-                  name="_ri_"
-                  value="X0Gzc2X%3DWQpglLjHJlYQGnp51yrMf2qXdC9tjU8pzgMtwfYzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DWQpglLjHJlYQGnyLSq2fzdkuzdzglHMsUhgeNzaSgkk"
                 />
               </form>
             </div>
@@ -203,15 +106,6 @@ export default function Footer() {
                   />
                 </a>
               </li>
-              <li>
-                <a href="https://www.twitter.com/artdotcom" title="Twitter">
-                  <img
-                    width="67"
-                    alt="Follow us on Twitter"
-                    src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png"
-                  />
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -230,34 +124,6 @@ export default function Footer() {
                 Terms of Sale
               </a>
             </p>
-            <p>
-              Art.com, You+Art, and Photos [to] Art are trademarks or registered
-              trademarks of Art.com Inc.
-            </p>
-            <p>
-              Various aspects of this website are covered by issued US patent
-              No. 7,973,796 and other pending patent applications.
-            </p>
-          </div>
-
-          <div className="footer-payment">
-            <ul>
-              <li className="ftr-stella">
-                <span title="Stella Service"></span>
-              </li>
-              <li>
-                <span>
-                  <img
-                    border="0"
-                    alt="HACKER SAFE certified sites prevent over 99.9% of hacker crime."
-                    src="https://images.scanalert.com/meter/www.art.com/31.gif"
-                  />
-                </span>
-              </li>
-              <li className="ftr-bbb">
-                <span title="BBB"></span>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
