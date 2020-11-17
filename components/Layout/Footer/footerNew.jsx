@@ -30,7 +30,7 @@ function Footer({ footerData }) {
                           as={article.path}
                         >
                           <a
-                            className="text-current "
+                            className="text-gray-400 "
                             aria-label={article.title}
                             href={article.path}
                           >
@@ -53,7 +53,7 @@ function Footer({ footerData }) {
                   <span>
                     <Link aria-label={info.title} href={info.path} key={idx}>
                       <a
-                        className="text-current"
+                        className="text-gray-400 "
                         aria-label={info.title}
                         href={info.path}
                       >
