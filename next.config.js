@@ -12,8 +12,11 @@ module.exports = bundleAnalyzer({
       'ghassanclassic.com',
     ],
   },
+})
+
+/**
   i18n: {
     locales: ['en-US', 'es'],
-    defaultLocale: 'en-US',
+    defaultLocale: '',
   },
-})
+ */

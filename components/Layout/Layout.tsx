@@ -6,7 +6,7 @@ const ErrorBound = dynamic(() => import('./ErrorBound'))
 //const Navbar = dynamic(() => import('./Navbar/NewNavbar'))
 //const Footer = dynamic(() => import('./Footer'))
 const Footer = dynamic(() => import('./Footer/footerNew'))
-const Navbar = dynamic(() => import('./Navbar/Navbar'))
+const Navbar = dynamic(() => import('./Navbar'))
 
 const Subscribe = dynamic(() => import('./Subscribe'))
 
@@ -40,18 +40,12 @@ export default function Layout(props: any) {
     <>
       {navbar && (
         <ErrorBound>
-          <Navbar />
+          <Navbar backendApiURL={backendApiURL} navbar={navbar} />
           {children}
           <Subscribe />
-          <Footer />
+          <Footer footerData={footerData} />
         </ErrorBound>
       )}
     </>
   )
 }
-
-/**
-       <Footer footerData={footerData} />
-          <Navbar backendApiURL={backendApiURL} navbar={navbar} />
-
- */
