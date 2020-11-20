@@ -12,7 +12,7 @@ export default function Dropdown(props: any) {
   }
 
   return (
-    <ul className="Dropdown dropdown-menu absolute z-50 md:right-0 hidden  md:-mt-4 md:pt-3 pt-1 shadow-lg">
+    <ul className="Dropdown dropdown-menu absolute z-50 md:right-0 hidden  md:-mt-4 md:pt-3 pt-1 shadow-lg ">
       <div className="flex place-items-stretch bg-white h-64  min-h-full justify-center">
         {options.map((dropdown: any, idxx: any) => (
           <li key={idxx}>
@@ -20,7 +20,7 @@ export default function Dropdown(props: any) {
               aria-label={dropdown.title}
               href={'/page/' + slug(dropdown.path)}
             >
-              <a className="rounded-t hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap ">
+              <a className="rounded-t  py-2 px-4 block whitespace-no-wrap ">
                 <h3 className="text-xl font-bold">{dropdown.title}</h3>
               </a>
             </Link>
@@ -31,7 +31,7 @@ export default function Dropdown(props: any) {
                     aria-label={dropdownOptions.title}
                     href={'/page/' + slug(dropdownOptions.path)}
                   >
-                    <a className="rounded-t hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap ">
+                    <a className="rounded-t  py-2 px-4 block whitespace-no-wrap ">
                       {dropdownOptions.title}
                     </a>
                   </Link>

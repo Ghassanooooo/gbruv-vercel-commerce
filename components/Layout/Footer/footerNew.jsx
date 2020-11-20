@@ -50,8 +50,8 @@ function Footer({ footerData }) {
               Reserved. |{' '}
               {infoPages.map((info, idx) => {
                 return (
-                  <span>
-                    <Link aria-label={info.title} href={info.path} key={idx}>
+                  <span key={idx}>
+                    <Link aria-label={info.title} href={info.path} >
                       <a
                         className="text-gray-400 "
                         aria-label={info.title}

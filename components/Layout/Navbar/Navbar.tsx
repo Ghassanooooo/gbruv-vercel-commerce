@@ -13,7 +13,7 @@ export default function Navbar(props: any) {
     }
   }
   return (
-    <nav className="w-full">
+    <nav className="w-full z-10">
       <ul className="md:flex w-full justify-center  text-base pt-4 md:pt-0">
         {navbar &&
           navbar.map((data: any, idx: any) => (
@@ -26,7 +26,7 @@ export default function Navbar(props: any) {
                 href="/page/[page]"
                 as={'/page/' + slug(data.path)}
               >
-                <a className="md:px-4 py-2 md:py-4 px-0  text-green-100 hover:text-gray-300 md:hover:bg-green-800 inline-flex items-center">
+                <a className="md:px-4 py-2 md:py-4 px-0  text-green-100  inline-flex items-center">
                   <span className="mr-1"> {data.title}</span>
                   <svg
                     className="fill-current h-4 w-4 mt-1"

@@ -18,69 +18,26 @@ const ViewDoc = (props: any) => {
       <Layout backendApiURL={backendApiURL}>
         {!!doc && (
           <LayoutSEOana page={doc} frontendURL={frontendURL}>
-            <main className="blog-details-area ptb-60">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-8 col-md-12 offset-lg-2 offset-md-0">
-                    <div className="blog-details">
-                      <div className="article-img">
-                        <Image
-                          width={800}
-                          height={600}
-                          src={doc.image}
-                          alt={doc.title}
-                        />
-                      </div>
-
-                      <div className="article-content">
-                        <ul className="entry-meta">
-                          <li>
-                            <i className="far fa-user"></i>
-                            <Link href="/info/[info]" as="/info/our-team">
-                              <a href="/info/our-team">
-                                {doc.creatorId.username}
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <i className="far fa-calendar-alt"></i>{' '}
-                            {doc.updatedDate}
-                          </li>
-                          <li>
-                            <i className="fas fa-eye"></i> {doc.views}
-                          </li>
-                        </ul>
-
-                        <h1>{doc.title}</h1>
-                        <h4>
-                          <p>{doc.description} </p>
-                        </h4>
-
-                        <div
+            <main className="w-screen">
+              <div  className="w-screen h-4/6 relative">
+              <div className="ViewDocHeader absolute left-2/4 top-2/4">   <Image  width='350' height="350" alt={doc.title} src={doc.image} /></div>
+         
+              <div className="w-screen h-screen bg-cover " style={{backgroundImage:`url('/docs/DocumentHeader.svg')`, height:'70vh', width:'100vw'}}>
+            
+              </div>
+              </div>
+              <div className="container mx-auto pt-10 pb-10">
+        <h1 className="text-2xl font-bold pb-5">{doc.title}</h1>
+        <p className="text-lg">{doc.description}</p>
+              </div>
+              <div style={{backgroundImage:`url('/docs/DocumentBody.svg')`}} className="w-screen ">
+              <div className="md:container md:mx-auto pb-20"
                           dangerouslySetInnerHTML={{
                             __html:
                               (doc.blogReview && doc.blogReview.content) ||
                               (doc.docReview && doc.docReview.content),
                           }}
                         />
-                        {currentTags && (
-                          <ul className="category">
-                            <li>
-                              <span>Tags:</span>
-                            </li>
-                            {currentTags.map((tag: any, idx: any) => (
-                              <li key={idx}>
-                                <Link href="/page/[page]" as={tag.path}>
-                                  <a href={tag.path}>{tag.title}</a>
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </main>
           </LayoutSEOana>
@@ -149,3 +106,68 @@ export const getStaticProps = async (context: any) => {
 }
 
 export default ViewDoc
+
+/**
+    <div className="row">
+                  <div className="col-lg-8 col-md-12 offset-lg-2 offset-md-0">
+                    <div className="blog-details">
+                      <div className="article-img">
+                        <Image
+                          width={800}
+                          height={600}
+                          src={doc.image}
+                          alt={doc.title}
+                        />
+                      </div>
+
+                      <div className="article-content">
+                        <ul className="entry-meta">
+                          <li>
+                            <i className="far fa-user"></i>
+                            <Link href="/info/[info]" as="/info/our-team">
+                              <a href="/info/our-team">
+                                {doc.creatorId.username}
+                              </a>
+                            </Link>
+                          </li>
+                          <li>
+                            <i className="far fa-calendar-alt"></i>{' '}
+                            {doc.updatedDate}
+                          </li>
+                          <li>
+                            <i className="fas fa-eye"></i> {doc.views}
+                          </li>
+                        </ul>
+
+                        <h1>{doc.title}</h1>
+                        <h4>
+                          <p>{doc.description} </p>
+                        </h4>
+
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              (doc.blogReview && doc.blogReview.content) ||
+                              (doc.docReview && doc.docReview.content),
+                          }}
+                        />
+                        {currentTags && (
+                          <ul className="category">
+                            <li>
+                              <span>Tags:</span>
+                            </li>
+                            {currentTags.map((tag: any, idx: any) => (
+                              <li key={idx}>
+                                <Link href="/page/[page]" as={tag.path}>
+                                  <a href={tag.path}>{tag.title}</a>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             
+ */

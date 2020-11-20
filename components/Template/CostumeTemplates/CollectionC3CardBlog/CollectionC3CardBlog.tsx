@@ -1,11 +1,26 @@
 import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-
+import CardBlog from '../../../Component/CardBlog/CardBlog'
 export default function CollectionC3CardBlog(props: any) {
   const { currentPayloads } = props
-  return currentPayloads && currentPayloads.length > 0 ? (
-    <section className="news-area ptb-60">
+  console.log('CollectionC3CardBlog ==> ',currentPayloads )
+  return (
+  <section className="w-screen bg-contain  pt-15 pb-15" style={{backgroundImage:`url('/templates/CollectionC3CardBlog.svg')`, height:'100vh', width:'100vw'}}>
+    <div  className=" md:container md:flex md:flex-wrap mx-auto">
+
+      {currentPayloads.map((i:any,idx:any)=> <CardBlog payload={i} key={idx}/>)}
+
+    
+    </div>
+  
+
+    </section>)
+ 
+}
+
+
+
+/**
+ <section className="news-area ptb-60">
       <div className="container">
         <div className="row">
           {currentPayloads.map((payload: any, idx: any) => (
@@ -57,9 +72,4 @@ export default function CollectionC3CardBlog(props: any) {
         </div>
       </div>
     </section>
-  ) : (
-    <div className="container">
-      <div>comming soon</div>
-    </div>
-  )
-}
+ */
